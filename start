@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#Script de start do servidor de desenvolvimento para o google app engine
+
+/home/cesaraugusto/bin/google_appengine/dev_appserver.py --blobstore_path=./db \
+														 --datastore_path=./db/dev_appserver.datastore \
+														 --enable_sendmail ./
