@@ -1,4 +1,4 @@
-appengine_django
+portal_django_cms
 ================
 
 Site Em Django,  utilizando o framework Django e o django-cms.
@@ -28,3 +28,4 @@ Criação do Banco de Dados
 
 Iniciar o Servidor de devenvolvimento
 	python manage.py runserver
+
