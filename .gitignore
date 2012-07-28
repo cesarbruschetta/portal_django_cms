@@ -1,0 +1,15 @@
+# Python Compiled files #
+######################
+*.log
+*.pot
+local_settings.py
+*.pyc
+.project
+.pydevproject
+.settings/org.eclipse.core.resources.prefs
+*.egg/*
+*~
+
+# OS generated files #
+######################
+.DS_Store*

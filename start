@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#Script de start do servidor de desenvolvimento para o Django CMS
+ 
+/opt/projetos/Django-CMS/bin/python /opt/projetos/Django-CMS/portal_django_cms/manage.py runserver
