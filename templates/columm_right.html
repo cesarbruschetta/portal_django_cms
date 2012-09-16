@@ -1,31 +1,42 @@
 <ul>	
    <li>
-        <h4><span>Navigate</span></h4>
+        <h4><span>Navigação</span></h4>
+        {% load menu_tags %} 
         <ul class="blocklist">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="examples.html">Examples</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Solutions</a></li>
-            <li><a href="#">Contact</a></li>
+        	{% show_menu 0 100 100 100 %}
         </ul>
     </li>
-    
     <li>
-        <h4><span>About</span></h4>
+        <h4><span>Calendario</span></h4>
         <ul>
             <li>
-            	<p style="margin: 0;">Aenean nec massa a tortor auctor sodales sed a dolor. Duis vitae lorem sem. Proin at velit vel arcu pretium luctus.</p>
+            	<div id="cont"></div>
+		          <script type="text/javascript">
+		            var LEFT_CAL = Calendar.setup({
+		                    cont: "cont",
+		                    weekNumbers: true,
+		                    selectionType: Calendar.SEL_MULTIPLE,
+		                    showTime: false
+		                    // titleFormat: "%B %Y"
+		            })
+		            LEFT_CAL.setLanguage('pt');
+		          </script>
             </li>
         </ul>
     </li>
-    
     <li>
-        <h4><span>Cool Sites</span></h4>
+        <h4><span>Hora Certa</span></h4>
         <ul>
-            <li><a href="http://www.themeforest.net/?ref=spykawg" title="premium templates"><strong>ThemeForest</strong></a> - premium HTML templates, WordPress themes and PHP scripts</li>
-            <li><a href="http://www.dreamhost.com/r.cgi?259541" title="web hosting"><strong>Web hosting</strong></a> - 50 dollars off when you use promocode <strong>awesome50</strong></li>
-            <li><a href="http://www.4templates.com/?aff=spykawg" title="4templates"><strong>4templates</strong></a> - brilliant premium templates</li>
+            <li>
+            	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+            			codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="250" height="250">
+            			<param name="movie" value="http://design.webepronto.com/free/freeclock27.swf">
+            			<param name="quality" value="high">
+            				<embed src="http://design.webepronto.com/free/freeclock27.swf" quality="high" 
+            					   pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" 
+            					   width="250" height="250"></embed>
+            	</object>
+			</li>
         </ul>
     </li>
-    
 </ul> 

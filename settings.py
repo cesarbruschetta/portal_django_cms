@@ -17,10 +17,20 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(PROJECT_DIR, './db/dev_appDataBase.db'),
+        'ENGINE': 'mysql',      # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'djangoCMS', # Or path to database file if using sqlite3.
+        'USER': 'root',         # Not used with sqlite3.
+        'PASSWORD': 'root',     # Not used with sqlite3.
+        'HOST': 'localhost',    # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '3306',         # Set to empty string for default. Not used with sqlite3.
     }
-}
+}             
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(PROJECT_DIR, './db/dev_appDataBase.db'),
+#    }
+#}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -167,6 +177,8 @@ INSTALLED_APPS = (
     'cms.plugins.teaser',
     'cms.plugins.video',
     'cms.plugins.twitter',
+    
+    'portal'
 
 )
 

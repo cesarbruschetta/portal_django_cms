@@ -18,8 +18,7 @@ Instalação
 	PIL
 	South = 0.7.5
 	django-reversion = 1.5.2
-	
-	gunicorn = 0.14.2
+	Mysql-Python
 	
 Criação do Banco de Dados
 
