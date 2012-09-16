@@ -12,6 +12,7 @@ Pre-requisitos
 		
 
 Instalação
+
 	django = 1.3.1
 	django-cms = 2.3
 	PIL

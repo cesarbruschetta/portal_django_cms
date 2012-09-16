@@ -36,10 +36,9 @@ TIME_ZONE = 'America/Sao_Paulo'
 LANGUAGE_CODE = 'pt-BR'
 
 
-LANGUAGES = [('en', 'English'),
-             ('pt-BR','Portugues')
+LANGUAGES = [('pt-BR','Portugues')
 ]
-DEFAULT_LANGUAGE = 1
+DEFAULT_LANGUAGE = 0
 
 SITE_ID = 1
 
@@ -127,7 +126,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 CMS_TEMPLATES = (
-    ('example.html', 'Example Template'),
+    ('man_page.html', 'Template Principal'),
 )
 
 
@@ -157,15 +156,18 @@ INSTALLED_APPS = (
     'mptt',
     'south',
     'sekizai',
-    #'reversion',
+
     'cms.plugins.text',
     'cms.plugins.picture',
     'cms.plugins.link',
     'cms.plugins.file',
     'cms.plugins.snippet',
     'cms.plugins.googlemap',
-    
-    
+    'cms.plugins.flash',
+    'cms.plugins.teaser',
+    'cms.plugins.video',
+    'cms.plugins.twitter',
+
 )
 
 # A sample logging configuration. The only tangible logging

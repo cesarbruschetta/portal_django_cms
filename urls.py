@@ -7,6 +7,9 @@ from django.conf import settings
 admin.autodiscover()
 
 urlpatterns = patterns('',
+    # Uncomment the next line to enable the admin:
+    url(r'^admin/', include(admin.site.urls)),                       
+    # Urls CMS
     url(r'^', include('cms.urls')),                       
     # Examples:
     # url(r'^$', 'djangoportal.views.home', name='home'),
@@ -15,8 +18,7 @@ urlpatterns = patterns('',
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
-    # Uncomment the next line to enable the admin:
-    url(r'^admin/', include(admin.site.urls)),
+    
 )
 
 if settings.DEBUG:

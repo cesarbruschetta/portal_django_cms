@@ -1,13 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 #Script de start do servidor de desenvolvimento para o Django CMS
- 
-/opt/projetos/Django-CMS/bin/python /opt/projetos/Django-CMS/portal_django_cms/manage.py runserver
-=======
-#Script de start do servidor de desenvolvimento para o google app engine
 
-/home/cesaraugusto/bin/google_appengine/dev_appserver.py --blobstore_path=./db \
-														 --datastore_path=./db/dev_appserver.datastore \
-														 --enable_sendmail ./
->>>>>>> a9c80f358f1f7994ede57f0bdf991f1dd90aabaf
+/opt/projetos/Django-CMS/bin/python /opt/projetos/Django-CMS/portal_django_cms/manage.py runserver
