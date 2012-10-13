@@ -1,0 +1,112 @@
+{% load cms_tags sekizai_tags %}
+{% load portal_extra %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>{{ request.current_page.get_title }} | {{ somevariable|get_Site }}</title>
+		<link rel="stylesheet" href="{{ STATIC_URL }}styles.css" type="text/css" />
+		
+		<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/jscal2.css" />
+    	<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/border-radius.css" />
+		
+	  	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}js/slider.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}js/superfish.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}js/custom.js"></script>
+	
+		<script src="{{ STATIC_URL }}js/jscal2.js"></script>
+    	<script src="{{ STATIC_URL }}js/unicode-letter.js"></script>
+		<script src="{{ STATIC_URL }}js/lang/pt.js"></script>
+	
+		{% render_block "css" %}
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="header">
+				
+		    	<h1><a href="/">Portal<strong>CMS</strong></a></h1>
+		        <h2>Seu portal utilizando DjangoCMS</h2>
+		        <div class="clear"></div>
+		    </div>
+		    <div id="nav">
+		    	{% load menu_tags %} 
+		    	
+		    	<ul class="sf-menu dropdown">
+		    		{% show_menu 0 100 100 100 %}
+		        	<!--li class="selected"><a href="index.html">Home</a></li>
+		            <li><a class="has_submenu" href="examples.html">Examples</a>
+		            	<ul>
+		                	<li><a href="page.html">Static Text Page</a></li>
+		                    <li><a href="#">A sub Link</a></li>
+		                    <li><a href="#">Another link</a></li>
+		                </ul>
+		            </li>
+		            <li><a class="has_submenu" href="#">Products</a>
+		            	<ul>
+		                	<li><a href="#">Product One</a></li>
+		                    <li><a href="#">Product Two</a></li>
+		                    <li><a href="#">Product Three</a></li>
+		                </ul>
+		            </li>
+		            <li><a href="#">Solutions</a></li>
+		            <li><a href="#">Contact</a></li-->
+		        </ul>
+		    </div>
+		    
+		    <div id="slides-container">
+		        <div id="slides">
+		            {% include "slides.html" %}
+				</div>
+		        <div class="controls">
+		        	<span class="jFlowNext">
+		        		<span>Next</span>
+					</span>
+					<span class="jFlowPrev">
+						<span>Prev</span></span>
+					</div>        
+		        <div id="myController" class="hidden">
+		        	<span class="jFlowControl">Slide 1</span>
+					<span class="jFlowControl">Slide 1</span>
+					<span class="jFlowControl">Slide 1</span>
+				</div>
+		    </div>
+		        
+		    <div id="body" class="has-slider">
+				<div id="content">
+		            <div class="box">
+		            	<h2>{{ request.current_page.get_title }}</h2>
+		    					
+						<!-- Conteudo principal -->
+						<div id="conteudo">	
+							{% cms_toolbar %}
+		    				{% placeholder "main" %}
+						</div>
+		            </div>
+		        </div>
+		        
+		        <div class="sidebar">
+		            <!-- Coluna  Right -->
+					{% include "columm_right.html" %}
+		        </div>
+		    	<div class="clear"></div>
+		    </div>
+		    <div id="footer">
+		        <div class="footer-content">
+		                <span class="sitename">{{ somevariable|get_Site }}</span>
+		                 <p class="footer-links">
+		    				<a href="#container" class="backtotop">Back to top</a>
+		               	 </p>
+		                 <div class="clear"></div>
+		        </div>
+		        <div class="footer-bottom">
+		        	<p style="float: left;padding: 0;">&nbsp;</p>
+  					<p id="sobre">&copy; 2012 <a href="{{ MEDIA_URL }}sobre.html" target="popupwindow" onclick='window.open("{{ MEDIA_URL }}sobre.html", "popupwindow", "scrollbars=yes,width=590,height=360");return true'>Cesar Augusto</a> - Todos os direitos reservados</p>
+  					{% include "analytics.html" %}
+		         </div>
+		    </div>
+		</div>
+		{% render_block "js" %}
+	</body>
+</html>

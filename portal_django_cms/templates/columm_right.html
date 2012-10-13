@@ -1,0 +1,42 @@
+<ul>	
+   <li>
+        <h4><span>Navigação</span></h4>
+        {% load menu_tags %} 
+        <ul class="blocklist">
+        	{% show_menu 0 100 100 100 %}
+        </ul>
+    </li>
+    <li>
+        <h4><span>Calendario</span></h4>
+        <ul>
+            <li>
+            	<div id="cont"></div>
+		          <script type="text/javascript">
+		            var LEFT_CAL = Calendar.setup({
+		                    cont: "cont",
+		                    weekNumbers: true,
+		                    selectionType: Calendar.SEL_MULTIPLE,
+		                    showTime: false
+		                    // titleFormat: "%B %Y"
+		            })
+		            LEFT_CAL.setLanguage('pt');
+		          </script>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <h4><span>Hora Certa</span></h4>
+        <ul>
+            <li>
+            	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+            			codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="250" height="250">
+            			<param name="movie" value="http://design.webepronto.com/free/freeclock27.swf">
+            			<param name="quality" value="high">
+            				<embed src="http://design.webepronto.com/free/freeclock27.swf" quality="high" 
+            					   pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" 
+            					   width="250" height="250"></embed>
+            	</object>
+			</li>
+        </ul>
+    </li>
+</ul> 
