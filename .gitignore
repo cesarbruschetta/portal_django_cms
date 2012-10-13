@@ -13,3 +13,5 @@ local_settings.py
 # OS generated files #
 ######################
 .DS_Store*
+
+portal_django_cms/files/media/photos/*

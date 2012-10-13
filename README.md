@@ -13,11 +13,10 @@ Pre-requisitos
 
 Instalação
 
-	django = 1.3.1
-	django-cms = 2.3
-	PIL
-	South = 0.7.5
-	django-reversion = 1.5.2
+	django = 1.4.1
+	django-cms = 2.3.3
+	PIL 
+	south 
 	Mysql-Python
 	
 Criação do Banco de Dados
