@@ -1,5 +1,6 @@
 #!/bin/bash
 
 #Script de start do servidor de desenvolvimento para o Django CMS
+export DATABASE_URL='mysql://bdbae1828bdc4d:b7db857e@us-cdbr-east-03.cleardb.com/heroku_905509e16d24d74?reconnect=true'
 
 /opt/projetos/Django-CMS/bin/python /opt/projetos/Django-CMS/portal_django_cms/manage.py runserver
