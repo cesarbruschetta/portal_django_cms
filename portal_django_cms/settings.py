@@ -178,6 +178,7 @@ INSTALLED_APPS = (
 
     'portal',
     'gunicorn',
+    'database_files',
 )
 
 # A sample logging configuration. The only tangible logging
