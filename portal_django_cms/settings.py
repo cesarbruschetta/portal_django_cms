@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # Django settings for portal_django_cms project.
-import os,dj_database_url
+import os
+import dj_database_url
 
 gettext = lambda s: s
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
@@ -15,7 +16,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = {}
-#DATABASES = {
+# DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.mysql',   # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
 #        'NAME': 'djangoCMS',                    # Or path to database file if using sqlite3.
@@ -23,10 +24,10 @@ DATABASES = {}
 #        'PASSWORD': 'root',                     # Not used with sqlite3.
 #        'HOST': 'localhost',                    # Set to empty string for localhost. Not used with sqlite3.
 #        'PORT': '3306',                         # Set to empty string for default. Not used with sqlite3.
-#    }             
+#    }
 #}
-#Banco de Dados Para heroku
-DATABASES['default'] =  dj_database_url.config()
+# Banco de Dados Para heroku
+DATABASES['default'] = dj_database_url.config()
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -39,7 +40,7 @@ TIME_ZONE = 'America/Sao_Paulo'
 LANGUAGE_CODE = 'pt-BR'
 
 LANGUAGES = [
-             ('pt-BR','Portugues')
+    ('pt-BR', 'Portugues')
 ]
 
 SITE_ID = 1
@@ -98,7 +99,7 @@ SECRET_KEY = 'e-$&amp;*t9kwsxf9zrqztez8xj4%bg=j!_9j34wfwvc+ekv7j)%m4'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+    #     'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -113,7 +114,7 @@ MIDDLEWARE_CLASSES = (
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
-    
+
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -131,6 +132,9 @@ ROOT_URLCONF = 'portal_django_cms.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'portal_django_cms.wsgi.application'
+
+# UPLOAD DE FILES
+DEFAULT_FILE_STORAGE = 'database_files.storage.DatabaseStorage'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -154,7 +158,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    
+
     'cms',
     'mptt',
     'menus',
@@ -167,11 +171,11 @@ INSTALLED_APPS = (
     'cms.plugins.link',
     'cms.plugins.picture',
     'cms.plugins.snippet',
-    'cms.plugins.teaser',    
+    'cms.plugins.teaser',
     'cms.plugins.text',
     'cms.plugins.video',
     'cms.plugins.twitter',
-    
+
     'portal',
     'gunicorn',
 )

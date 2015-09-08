@@ -11,3 +11,4 @@ html5lib==0.95
 wsgiref==0.1.2
 dj-database-url==0.2.1
 gunicorn==0.14.2
+django-database-files==0.1
