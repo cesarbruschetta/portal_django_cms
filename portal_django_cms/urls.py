@@ -9,24 +9,27 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'portal_django_cms.views.home', name='home'),
-    # url(r'^portal_django_cms/', include('portal_django_cms.foo.urls')),
+                       # Examples:
+                       # url(r'^$', 'portal_django_cms.views.home', name='home'),
+                       # url(r'^portal_django_cms/',
+                       # include('portal_django_cms.foo.urls')),
 
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+                       # Uncomment the admin/doc line below to enable admin documentation:
+                       # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
-    # Uncomment the next line to enable the admin:
-    url(r'^admin/', include(admin.site.urls)),
-    
-    # Cms
-    url(r'^', include('cms.urls')),
-    
-    # URL de arquivos staticos
-    url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
-        {'document_root': settings.MEDIA_ROOT, 'show_indexes': False}),
+                       url(r'^files/', include('database_files.urls')),
 
-    url(r'^statics/(?P<path>.*)$', 'django.views.static.serve',
-        {'document_root': PATH_STATIC, 'show_indexes': False}),                       
-    
-)
+                       # Uncomment the next line to enable the admin:
+                       url(r'^admin/', include(admin.site.urls)),
+
+                       # Cms
+                       url(r'^', include('cms.urls')),
+
+                       # URL de arquivos staticos
+                       url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
+                           {'document_root': settings.MEDIA_ROOT, 'show_indexes': False}),
+
+                       url(r'^statics/(?P<path>.*)$', 'django.views.static.serve',
+                           {'document_root': PATH_STATIC, 'show_indexes': False}),
+
+                       )
