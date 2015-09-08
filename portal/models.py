@@ -17,7 +17,7 @@ class Slide(models.Model):
     conteudo = models.TextField()
     publicacao = models.DateTimeField(default=datetime.now, blank=True)
 
-    image = models.ImageField(upload_to='', blank=True)
+    image = models.ImageField(upload_to='image', blank=True)
 
     def __str__(self):
         return '%s, %s' % (self.titulo, self.publicacao)
